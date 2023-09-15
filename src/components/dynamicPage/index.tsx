@@ -19,8 +19,10 @@ export const DynamicPage = (props: any) => {
         )
     }
 
+    const backgroundColor = website.theme.color_2;
+
     return (
-        <div className='l-layout'>
+        <div className='l-layout' style={backgroundColor ? { backgroundColor } : {}}>
             <Navbar navbar={website.header[0]} website={website} />
             <main className="l-layout__content">
                 <div>

@@ -31,7 +31,7 @@ export const Footer: any = (props: any) => {
           ['--footer__bi' as string]: `url(${image.image.url.toString()})`,
         }}>
           <div className="c-footer__location">
-            {title}
+            {headline}
           </div>
 
           {links && links[0] && <div className="c-footer__columns">

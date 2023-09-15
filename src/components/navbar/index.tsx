@@ -29,10 +29,13 @@ export const Navbar: any = (props: any) => {
     )
   });
 
+  const backgroundColor = props.website.theme.color_1;
+
+
   return (
     <div className='l-layout__header'>
 
-      <header className={'c-header c-header--bg-filled'}>
+      <header className={'c-header c-header--bg-filled'}  style={backgroundColor ? { backgroundColor } : {}}>
         <div className="c-header__inner">
           <div className={'c-header__logo'}>
             {props.navbar.headline}

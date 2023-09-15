@@ -8,7 +8,7 @@ export const RichText = ({ text, className, style }: any) => {
   //   className && className
   // );
   return <div
-    // className={richTextCl}
+    className={'c-rich-text'}
     style={style}
     dangerouslySetInnerHTML={{ __html: text }}
   />;
