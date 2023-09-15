@@ -30,7 +30,9 @@ export const Navbar: FC = (props: any) => {
 
       <header className={'c-header c-header--bg-filled'}>
         <div className="c-header__inner">
-
+          <div className={'c-header__logo'}>
+            {props.headline}
+          </div>
           <Link className={'c-header__logo c-header__logo--unauth'} href={'/'}>
             <div>
               <ImageComponent

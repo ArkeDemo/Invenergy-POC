@@ -9,15 +9,13 @@ export const Quote = (props: any) => {
 
     return (
         <section>
-            {/* <div className="p-template-1__quote" data-testid='quote section'> */}
-                <div className="c-quote">
-                    <div className="c-quote__header c-quote__header--icon" />
-                    <div className="c-quote__header" data-testid='quote title'>{props.headline}</div>
-                    <div className="c-quote__type" data-testid='quote text'>
-                        <RichText text={props.headline_copy} />
-                    </div>
+            <div className="c-quote">
+                <div className="c-quote__header c-quote__header--icon" />
+                <div className="c-quote__header" data-testid='quote title'>{props.headline}</div>
+                <div className="c-quote__type" data-testid='quote text'>
+                    <RichText text={props.headline_copy} />
                 </div>
-            {/* </div> */}
+            </div>
             <CTA data={props.cta} />
 
         </section>
