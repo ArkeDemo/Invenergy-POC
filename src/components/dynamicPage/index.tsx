@@ -4,7 +4,6 @@ import { Footer } from '@/components/footer/index'
 import { Navbar } from '@/components/navbar/index'
 import { Overview } from '@/components/sections/overview/index'
 import { Quote } from '@/components/sections/quote/index'
-import { TwoColumn } from '@/components/sections/twoColumn/index'
 
 export const DynamicPage = (props: any) => {
     const { website, page } = props.contentstack;
@@ -29,7 +28,7 @@ export const DynamicPage = (props: any) => {
 
                     {page.content.map((section: any, i: number) => {
                         const {
-                            overview, two_column, quote
+                            overview, quote
                         } = section;
 
 
@@ -37,15 +36,12 @@ export const DynamicPage = (props: any) => {
                             return <Overview key={i} {...section.overview} />
                         }
 
-                        if (two_column) {
-                            return <TwoColumn key={i} {...section.two_column} />
-                        }
-
                         if (quote) {
                             return <Quote key={i} {...section.quote} />
                         }
 
                     })}
+                    <div className='c-divider c-divider--transparent c-divider--top' />
                 </div>
             </main>
 

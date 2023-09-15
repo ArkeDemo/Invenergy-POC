@@ -1,6 +1,7 @@
 'use client'
 
 import { RichText } from "@/components/richText";
+import { CTA } from "@/components/cta";
 
 export const Quote = (props: any) => {
 
@@ -8,14 +9,16 @@ export const Quote = (props: any) => {
 
     return (
         <section>
-            <div>
+            {/* <div className="p-template-1__quote" data-testid='quote section'> */}
                 <div className="c-quote">
-                    {/* <div className="c-quote__header">Quote</div> */}
-                    <div className="c-quote__type">
-                        <RichText text={props.headline} />
+                    <div className="c-quote__header c-quote__header--icon" />
+                    <div className="c-quote__header" data-testid='quote title'>{props.headline}</div>
+                    <div className="c-quote__type" data-testid='quote text'>
+                        <RichText text={props.headline_copy} />
                     </div>
                 </div>
-            </div>
+            {/* </div> */}
+            <CTA data={props.cta} />
 
         </section>
     )

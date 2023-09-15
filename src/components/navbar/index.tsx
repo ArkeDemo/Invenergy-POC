@@ -28,7 +28,7 @@ export const Navbar: FC = (props: any) => {
   return (
     <div className='l-layout__header'>
 
-      <header className={'c-header'}>
+      <header className={'c-header c-header--bg-filled'}>
         <div className="c-header__inner">
 
           <Link className={'c-header__logo c-header__logo--unauth'} href={'/'}>
