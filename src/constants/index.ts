@@ -1,0 +1,1 @@
+export const ENV_VARIABLE = process.env.ENV_VARIABLE
