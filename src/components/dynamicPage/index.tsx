@@ -21,8 +21,8 @@ export const DynamicPage = (props: any) => {
     }
 
     return (
-        <>
-            <Navbar {...website.header[0]} />
+        <div className='l-layout'>
+            <Navbar {...website.header[0]} website={website} />
             <div>
                 {page.content.map((section: any, i: number) => {
                     const {
@@ -45,6 +45,6 @@ export const DynamicPage = (props: any) => {
                 })}
             </div>
             <Footer {...website.footer[0]} />
-        </>
+        </div>
     )
 }
