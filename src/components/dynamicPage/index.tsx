@@ -21,7 +21,7 @@ export const DynamicPage = (props: any) => {
 
     return (
         <div className='l-layout'>
-            <Navbar {...website.header[0]} website={website} />
+            <Navbar navbar={website.header[0]} website={website} />
             <main className="l-layout__content">
                 <div>
                     <div className='c-divider c-divider--transparent c-divider--top' />
@@ -45,7 +45,7 @@ export const DynamicPage = (props: any) => {
                 </div>
             </main>
 
-            <Footer {...website.footer[0]} />
+            <Footer footer={website.footer[0]} />
         </div>
     )
 }

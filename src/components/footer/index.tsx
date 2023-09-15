@@ -4,13 +4,18 @@ import { ImageComponent } from '../imageComponent';
 import Link from 'next/link';
 import classNames from 'classnames';
 
-export const Footer: FC = (props: any) => {
+export const Footer: any = (props: any) => {
+
+  if (!props.footer){
+    return null;
+  }
+
   const {
     title,
     image,
     links = [],
     headline,
-  } = props;
+  } = props.footer;
 
   console.log('Footer', props)
 
@@ -47,7 +52,6 @@ export const Footer: FC = (props: any) => {
           </div>}
         </div>
         <div className="c-footer__rights">
-
         </div>
       </div>
     </footer>

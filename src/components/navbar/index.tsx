@@ -3,14 +3,18 @@ import Link from 'next/link';
 import { ImageComponent } from '@/components/imageComponent';
 import { useRouter } from 'next/navigation'
 
-export const Navbar: FC = (props: any) => {
+export const Navbar: any = (props: any) => {
   const router = useRouter();
+
+  if (!props.navbar){
+    return null;
+  }
 
   const onMenuLinkClick = (link: string) => {
     router.push(link);
   }
 
-  const navLinks = props.links.map((el: any, index: number) => {
+  const navLinks = (props.navbar.links || []).map((el: any, index: number) => {
     const title = el.abstract?.title;
     const href = el.url;
 
@@ -31,7 +35,7 @@ export const Navbar: FC = (props: any) => {
       <header className={'c-header c-header--bg-filled'}>
         <div className="c-header__inner">
           <div className={'c-header__logo'}>
-            {props.headline}
+            {props.navbar.headline}
           </div>
           <Link className={'c-header__logo c-header__logo--unauth'} href={'/'}>
             <div>
