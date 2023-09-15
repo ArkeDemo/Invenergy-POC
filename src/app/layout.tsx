@@ -1,5 +1,4 @@
 import '../styles/styles.scss'
-import { Navbar, Footer } from '../components/index'
 
 export default function RootLayout({
   children,
@@ -9,9 +8,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   )

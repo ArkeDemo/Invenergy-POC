@@ -1,7 +1,11 @@
-import { DynamicPage } from '@/components/index'
 
-export default function Page(props: any) {
+import { DynamicPage } from '@/components/index'
+import { getPageProps } from '@/utils/index'
+
+export default async function Page(props: any) {
+  const pageProps = await getPageProps(props)
+
   return (
-    <DynamicPage {...props}/>
+    <DynamicPage {...pageProps}/>
   )
 }
