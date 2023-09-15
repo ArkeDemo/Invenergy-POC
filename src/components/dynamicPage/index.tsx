@@ -23,27 +23,32 @@ export const DynamicPage = (props: any) => {
     return (
         <div className='l-layout'>
             <Navbar {...website.header[0]} website={website} />
-            <div>
-                {page.content.map((section: any, i: number) => {
-                    const {
-                        overview, two_column, quote
-                    } = section;
+            <main className="l-layout__content">
+                <div>
+                    <div className='c-divider c-divider--transparent c-divider--top' />
+
+                    {page.content.map((section: any, i: number) => {
+                        const {
+                            overview, two_column, quote
+                        } = section;
 
 
-                    if (overview) {
-                        return <Overview key={i} {...section.overview} />
-                    }
+                        if (overview) {
+                            return <Overview key={i} {...section.overview} />
+                        }
 
-                    if (two_column) {
-                        return <TwoColumn key={i} {...section.two_column} />
-                    }
+                        if (two_column) {
+                            return <TwoColumn key={i} {...section.two_column} />
+                        }
 
-                    if (quote) {
-                        return <Quote key={i} {...section.quote} />
-                    }
+                        if (quote) {
+                            return <Quote key={i} {...section.quote} />
+                        }
 
-                })}
-            </div>
+                    })}
+                </div>
+            </main>
+
             <Footer {...website.footer[0]} />
         </div>
     )
