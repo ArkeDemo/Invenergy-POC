@@ -5,6 +5,7 @@ import { ENV_VARIABLE } from '@/constants/index'
 
 export const DynamicPage = (props: any) => {
     const url = getUrl(props);
+    console.log(props)
 
     return (
         <>
