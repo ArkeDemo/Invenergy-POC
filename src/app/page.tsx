@@ -1,11 +1,11 @@
 
 import { DynamicPage } from '@/components/index'
-import { getContentstackContent } from '@/services/contentStack/index'
+import { getPageProps } from '@/utils/index'
 
 export default async function Page(props: any) {
-  const data = await getContentstackContent('website', 'blte5be9b6f51c61c2a');
+  const pageProps = await getPageProps(props)
 
   return (
-    <DynamicPage {...{...props, data}}/>
+    <DynamicPage {...pageProps}/>
   )
 }
