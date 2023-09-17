@@ -21,7 +21,7 @@ export const Footer: any = (props: any) => {
     theme,
   } = props.website;
 
-  const { color_1, color_2 } = theme;
+  const { color_1, color_2, background_color, primary_color, secondary_color } = theme;
 
   console.log('Footer', props)
 
@@ -34,7 +34,7 @@ export const Footer: any = (props: any) => {
     <footer className="l-layout__footer">
       <div className="c-footer">
         <div className="c-footer__inner"
-          style={{ backgroundColor: color_1, color: color_2, height: '15rem' }}
+          style={{ backgroundColor: primary_color, color: secondary_color, height: '15rem' }}
         >
           <div className="c-footer__location" style={{display: 'flex'}}>
             {
@@ -44,7 +44,7 @@ export const Footer: any = (props: any) => {
                       key={index}
                       href={link.url}
                       className="c-footer__inner-link c-link"
-                      style={{ color: color_2, padding: '2rem' }}
+                      style={{ color: secondary_color, padding: '2rem' }}
                     >{link.abstract.link_title}</Link>
                   )
                 })

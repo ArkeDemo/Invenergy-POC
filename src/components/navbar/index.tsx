@@ -23,15 +23,14 @@ export const Navbar: any = (props: any) => {
         key={index}
         className={'c-header__nav-link c-link'}
         onClick={() => onMenuLinkClick(href)}
-        style={{ color: props.website.theme.color_2 }}
+        style={{ color: props.website.theme.secondary_color }}
       >
         {title}
       </span>
     )
   });
 
-  const backgroundColor = props.website.theme.color_1;
-
+  const backgroundColor = props.website.theme.primary_color;
 
   return (
     <div className='l-layout__header'>

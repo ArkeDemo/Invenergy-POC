@@ -20,7 +20,7 @@ export const DynamicPage = (props: any) => {
         )
     }
 
-    const backgroundColor = website.theme.color_2;
+    const backgroundColor = website.theme.background_color;
 
     return (
         <div className='l-layout' style={backgroundColor ? { backgroundColor } : {}}>
@@ -44,7 +44,7 @@ export const DynamicPage = (props: any) => {
                         }
 
                     })}
-                    <div className='c-divider c-divider--transparent c-divider--top' />
+                    {/* <div className='c-divider c-divider--transparent c-divider--top' /> */}
                 </div>
             </main>
 
