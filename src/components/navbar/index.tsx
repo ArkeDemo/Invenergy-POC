@@ -23,6 +23,7 @@ export const Navbar: any = (props: any) => {
         key={index}
         className={'c-header__nav-link c-link'}
         onClick={() => onMenuLinkClick(href)}
+        style={{ color: props.website.theme.color_2 }}
       >
         {title}
       </span>
@@ -39,6 +40,7 @@ export const Navbar: any = (props: any) => {
         <div className="c-header__inner">
           <div className={'c-header__logo'}>
             <ImageComponent
+              // style={{height: '100%', width: '100%', objectFit: 'contain'}}
               className="c-header__logo-img"
               data={props.navbar.logo}
               width={157}

@@ -48,7 +48,7 @@ export const DynamicPage = (props: any) => {
                 </div>
             </main>
 
-            <Footer footer={website.footer[0]} />
+            <Footer footer={website.footer[0]} website={website} />
         </div>
     )
 }
