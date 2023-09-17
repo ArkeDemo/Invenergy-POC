@@ -44,7 +44,7 @@ export const Navbar: any = (props: any) => {
             <div>
               <ImageComponent
                 className="c-header__logo-img"
-                data={props.website.logo}
+                data={props.navbar.logo}
                 width={157}
                 height={100}
               />
