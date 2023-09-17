@@ -16,8 +16,8 @@ export const Quote = (props: any) => {
                     <RichText text={headline_copy} />
                 </div>
             </div>
-            <br />
             <CTA data={cta} />
+            <br/>
         </section>
     )
 }
