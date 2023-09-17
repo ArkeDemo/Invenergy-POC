@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 export const Navbar: any = (props: any) => {
   const router = useRouter();
 
-  if (!props.navbar){
+  if (!props.navbar) {
     return null;
   }
 
@@ -35,21 +35,16 @@ export const Navbar: any = (props: any) => {
   return (
     <div className='l-layout__header'>
 
-      <header className={'c-header c-header--bg-filled'}  style={backgroundColor ? { backgroundColor } : {}}>
+      <header className={'c-header c-header--bg-filled'} style={backgroundColor ? { backgroundColor } : {}}>
         <div className="c-header__inner">
           <div className={'c-header__logo'}>
-            {props.navbar.headline}
+            <ImageComponent
+              className="c-header__logo-img"
+              data={props.navbar.logo}
+              width={157}
+              height={100}
+            />
           </div>
-          <Link className={'c-header__logo c-header__logo--unauth'} href={'/'}>
-            <div>
-              <ImageComponent
-                className="c-header__logo-img"
-                data={props.navbar.logo}
-                width={157}
-                height={100}
-              />
-            </div>
-          </Link>
 
           <div className={'c-header__nav c-header__nav--unauth'}>
 

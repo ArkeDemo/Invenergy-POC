@@ -12,7 +12,7 @@
   --footer__bi: #{url("/")};
 
   display: flex;
-  height: 40.3rem;
+  height: 20rem;
   padding: (12 * $indent) (17 * $indent);
   background-image: var(--footer__bi), linear-gradient(to bottom, rgba(78, 69, 64, 0.4), rgba(78, 69, 64, 0));
   background-size: cover;
@@ -20,7 +20,7 @@
 
   @include respond-to(tablet-l) {
     flex-direction: column;
-    height: 110.9rem;
+    // height: 40.3rem;
   }
 
   @include respond-to(mobile) {

@@ -93,4 +93,8 @@
     display: list-item;
     text-align: -webkit-match-parent;
   }
+
+  & img {
+    max-width: 100%;
+  }
 }
