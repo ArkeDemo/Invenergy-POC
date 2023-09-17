@@ -15,9 +15,9 @@ export const Quote = (props: any) => {
                 <div className="c-quote__type" data-testid='quote text' style={{ color: text_color }}>
                     <RichText text={headline_copy} />
                 </div>
+                <br/>
+                <CTA data={cta} />
             </div>
-            <CTA data={cta} />
-            <br/>
         </section>
     )
 }
